@@ -15,6 +15,7 @@ app.use(clerkMiddleware) ;
 
 // API routes
 app.get('/',(req,res)=>req.setEncoding('Server is Live!')) ;
+app.use('/api/inngest',serve({client:inngest,functions})) ;
 
 app.listen(port,()=>{
     console.log(`Server listening at https://localhost:${port}`) ;
